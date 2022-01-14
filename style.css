@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face { /* idroid */
+	font-family: "idroid";
+	src: url('pacote-projeto-d010/fontes/idroid.otf') format("opentype");
+	font-weight: 400;
+}
+
+:root{
+	--cor1: #7fc77f;
+	--cor2: #94bd94;
+	--cor3: #73af73;
+	--cor4: #cbe6cb70;
+	--cor5: #203320;
+	--cor6: #162216;
+	--fonte-padrao: Arial, Helvetica, sans-serif;
+	--fonte-titulos: "idroid", sans-serif;
+	--fonte-logo: 'Bebas Neue', cursive;
+	--sombra1: 0 0 10px #0000006c;
+	--sombra2: 0 0 5px #0000006c;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: var(--fonte-padrao);
+	background-color: var(--cor2);
+}
+
+header{
+	min-height: 150px;
+	background-image: linear-gradient(180deg, var(--cor1), 40%, var(--cor5));
+	color: white;
+	box-shadow: var(--sombra1);
+}
+
+header > *:not(nav){
+	margin: auto;
+	text-align: center;
+	max-width: 600px;
+	text-shadow: var(--sombra1);
+}
+
+.logo-title{
+	padding-top: 1em;
+	font: normal 2.5em var(--fonte-logo);
+}
+
+.logo-subtitle{
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
+ul{
+	list-style: none;
+}
+
+.menu{
+	margin-top: 30px;
+}
+
+.menu a{
+	color: white;
+	text-decoration: none;
+}
+
+.menu li{
+	display: inline-block;
+	padding: 5px 20px;
+	font-weight: bold;
+}
+
+.menu li:hover{
+	background-color: var(--cor3);
+	color: var(--cor6);
+	border-radius: 3px;
+	transition: ease-in .2s;
+}
+
+main{
+	min-width: 280px;
+	max-width: 800px;
+	margin: auto;
+	margin-bottom: 30px;
+	padding: 20px 40px;
+	background-color: white;
+	text-align: justify;
+	box-shadow: var(--sombra1);
+	border-radius: 0 0 5px 5px;
+}
+
+main h1:not(.main-title), main h2, main p:not(footer > p){
+	margin: 20px 0;
+}
+
+main p{
+	text-indent: 30px;
+	line-height: 1.5em;
+}
+
+main strong{
+	color: var(--cor6);
+}
+
+h1:not(.logo-title), h2{
+	font-family: var(--fonte-titulos);
+	text-align: left;
+	color: var(--cor6);
+}
+
+.subtitle{
+	background-image: linear-gradient(to right, var(--cor1), transparent);
+	padding: 2px 10px;
+}
+
+.main-link{
+	padding: 1px 5px;
+	background-color: var(--cor1);
+	border-radius: 3.3px;
+}
+
+.main-link::after{
+	content: "\01F517";
+}
+
+main a:not(.footer-link){
+	color: black;
+	text-decoration: none;
+}
+
+.main-link:hover{
+	text-decoration: underline;
+}
+
+img{
+	width: 100%;
+}
+
+.img-pequeno{
+	max-width: 350px;
+	display: block;
+	margin: auto;
+}
+/* Solução do Gustavo para o vídeo */
+.player{
+	background-color: var(--cor5);
+	margin: 0 -20px 30px -20px;
+	padding: 20px;
+	padding-bottom: 58%;
+	position: relative;
+}
+
+.video{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+}
+
+/* Minha solução para o vídeo
+.player{
+	background-color: var(--cor5);
+	margin: 0 -40px 30px -40px;
+	padding: 20px 0;
+	margin-bottom: 30px;
+	min-height: 400px;
+}
+
+.video{
+	display: block;
+	margin: auto;
+	width: 90%;
+	min-height: 400px;
+}
+*/
+
+.extra{
+	margin: auto;
+	box-shadow: var(--sombra2);
+}
+
+.extra-article{
+	padding: 10px 15px;
+	background-color: var(--cor4);
+	border-radius: 10px;
+	text-align: justify;
+}
+
+.extra-title{
+	background-color: var(--cor1);
+	color: var(--cor6);
+	padding: 5px 10px;
+	margin: -15px -15px 0 -15px;
+	border-radius: 10px 10px 0 0;
+}
+
+.version-list{
+	list-style-position: inside;
+	columns: 2;
+	list-style-type: "\02714\00A0";
+}
+
+.version-list-item > abbr{
+	text-decoration: underline;
+}
+
+footer{
+	color: #ffffff;
+	background-color: var(--cor5);
+	text-align: center;
+	height: 50px;
+	line-height: 300%;
+}
+
+.footer-link{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.footer-link:hover{
+	background-color: var(--cor3);
+	color: var(--cor6);
+	border-radius: 5px;
+	transition: ease-in .2s;
+}
